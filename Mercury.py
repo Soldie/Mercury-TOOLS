@@ -1156,65 +1156,7 @@ def PlatformCheck():
 		long()
 		agreement()
 try:
-
-	if argv[1] != "":
-		mainmenu()
-	if sys.argv[1] == 'mainmenu':
-		mainmenu()
-	if sys.argv[1] == 'readme':
-		readme()
-	if sys.argv[1] == 'bruteforce':
-		brute_force()
-	if sys.argv[1] == 'port':
-		listen()
-	if sys.argv[1] == 'geolocation':
-		geoLocation()
-	if sys.argv[1] == 'mac':
-		mac()
-	if sys.argv[1] == 'status':
-		networksweb()
-	if sys.argv[1] == 'file':
-		file()
-	if sys.argv[1] == 'github':
-		github()
-	if sys.argv[1] == 'pip':
-		pip_installe()
-	if sys.argv[1] == 'source':
-		sourcecode()
-	if sys.argv[1] == 'ip':
-		ipaddress()
-	if sys.argv[1] == 'sublink':
-		sub_link()
-	if sys.argv[1] == 'hash':
-		hash()
-	if sys.argv[1] == 'tools':
-		toolss()
-	if sys.argv[1] == 'proxy':
-		proxys()
-	if sys.argv[1] == 'dork':
-		dork1()
-	if sys.argv[1] == 'browser':
-		webbrowserfunc()
-	if sys.argv[1] == 'spam':
-		emailspam()
-	if sys.argv[1] == 'spoof':
-		emailspoofsetup()
-	if sys.argv[1] == 'site':
-		siteexists()
-	if sys.argv[1] == 'encode':
-		encode1()
-	if sys.argv[1] == 'decode':
-		decode1()
-	if sys.argv[1] == 'pannel':
-		admin()
-	if sys.argv[1] == 'dos':
-		ddos()
-	if sys.argv[1] == 'sms':
-		sms()
-	if sys.argv[1] == 'websites':
-		websitess()
-	if sys.argv[1] == 'twitter':
-		twitter()
+	mainmenu
 	attempt = 0
 	InternetCheck()
 	PlatformCheck()
