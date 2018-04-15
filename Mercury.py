@@ -128,7 +128,7 @@ def space():
 	print ' '
 
 def agreement():
- afile = open(x+'\Extra\Mercury.txt','r+')
+ afile = open(x+'/Extra/Mercury.txt','r+')
  term = afile.readlines() # Creates a list of lines called term
  for line in term: #for lines in term
      print(line) #prints line
@@ -142,7 +142,7 @@ def agreement():
          print(termsAndConditions)
          agree = raw_input(Fore.YELLOW + 'Type "yes" To Agree: ')
          if agree == 'yes': #saves agree
-             file = open(x+'\Extra\Mercury.txt','w')
+             file = open(x+'/Extra/Mercury.txt','w')
              afile.write('yes')
              file.close()
              afile.close()
@@ -645,7 +645,7 @@ def siteexists():
         	long()
         	mainmenu()
 def brute_force(): #Declares Function
-	f = open(x+'\Resources\passwords.txt', 'r')
+	f = open(x+'/Resources/passwords.txt', 'r')
 	options = webdriver.ChromeOptions()
 	options.add_argument("--disable-popup-blocking")
 	options.add_argument("--ignore-certificate-errors")
@@ -662,7 +662,7 @@ def brute_force(): #Declares Function
 	SSS  = raw_input ('				What is the CSS Selector for the Submit Button? ') #CSS Selector Submit
 	url4 = raw_input('					What is the Url? ') #URL Requests
 	if data_store == 'y':
-		log_file = open (x+"\Resources\BruteForce.txt", 'w')
+		log_file = open (x+"/Resources/BruteForce.txt", 'w')
 	browser.get(url4)
 	count = 1 #count
 	while True:
