@@ -18,6 +18,7 @@ import json
 import wget
 import socket
 import urllib
+import urllib2
 import smtplib
 import random
 import hashlib
@@ -37,7 +38,6 @@ try:
 	import wget
 	import socket
 	import urllib
-	import urllib2
 	import smtplib
 	import random
 	import hashlib
@@ -61,9 +61,6 @@ except ImportError: #If you dont have the required modules this error will help 
 		os.system('pip2 install selenium')
 		os.system('pip2 install colorama')
 		os.system('pip2 install requests')
-		os.system('pip2 install urllib2')
-		os.system('pip2 install os')
-		os.system('pip2 install urllib')
 		os.system('pip2 install pygoogling')
 		os.system('pip2 install hashlib')
 		os.system('pip2 install smtplib')
@@ -113,16 +110,15 @@ and violate privacy
 
 '''
 #terms and condtions
-
+def clear():
+	os.system('clear')
+	os.system('cls')
 def extra_long():
 	time.sleep(10) #Pause == 4 Secs
 def long():
 	time.sleep(5) #Pause == 3 Secs
 def quick():
 	time.sleep(2) #Pause == 2 Secs
-def clear():
-	os.system('clear')
-	os.system('cls')
 def space():
 	print ' '
 	print ' '
@@ -134,11 +130,9 @@ def agreement():
      print(line) #prints line
      if 'yes' in line: #if you agreed skip to main menu
          found = True
-         clear()
-         mainmenu()
+         PlatformCheck()
      if ' ' in line: #if not load up terms
          found = False
-         clear()
          print(termsAndConditions)
          agree = raw_input(Fore.YELLOW + 'Type "yes" To Agree: ')
          if agree == 'yes': #saves agree
@@ -146,7 +140,7 @@ def agreement():
              afile.write('yes')
              file.close()
              afile.close()
-             mainmenu()
+             PlatformCheck()
          else:
         	agreement()
 def ddos():
@@ -844,8 +838,9 @@ def webbrowserfunc():
 	anonbrowser.get('http://www.ip-adress.eu/')
 
 def mac():
+	global macs
 	try:
-		os.system('getmac') #For Linux Change to ifconfig -a
+		os.system(macs + ' ') #For Linux Change to ifconfig -a
 		long()
 		mainmenu()
 	except KeyboardInterrupt:
@@ -1017,6 +1012,10 @@ def file():
 			print (Fore.CYAN + '----------------------')
 			long()
 			mainmenu()
+		except OSError:
+			print (Fore.RED + 'File not found')
+			quick()
+			mainmenu()
 def nmap():
 	nmap_ins = raw_input(Fore.CYAN + 'Have you already installed nmap? y/n ')
 	if nmap_ins == 'n':
@@ -1045,7 +1044,6 @@ def listen():
 proxys_num2 = 0
 proxys_num = 0
 def mainmenu():
-	clear()
 	print (Fore.WHITE +  color.BOLD + '''  /$$      /$$
  | $$$    /$$$
  | $$$$  /$$$$  /$$$$$$   /$$$$$$   /$$$$$$$ /$$   /$$  /$$$$$$  /$$   /$$
@@ -1143,23 +1141,23 @@ def InternetCheck():
 def PlatformCheck():
 	if sys.platform == 'win32':
 		print(Fore.CYAN + "Windows Detected")  ##Windows 32-bit Check
+		macs = 'getmac'
 		quick()
-		agreement()
-
+		mainmenu()
 	if sys.platform == 'win64':
 		print(Fore.CYAN + "Windows Detected")  ##Windows 64-bit Check
+		macs = 'getmac'
 		quick()
-		agreement()
-
+		mainmenu()
 	else:
 		print(Fore.RED + "Unix/Linux Kernel detected... mercury is built for windows\n")  #Linux
+		macs = 'ifconfig -a'
 		long()
-		agreement()
-try:
-	mainmenu
-	attempt = 0
+		mainmenu()
+def main():
 	InternetCheck()
-	PlatformCheck()
+	agreement()
+	attempt = 0
 	mainmenu()
-except KeyboardInterrupt:
-	mainmenu()
+
+main()
