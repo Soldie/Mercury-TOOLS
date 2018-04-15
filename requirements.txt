@@ -1,5 +1,8 @@
-selenium
-urllib2
-requests
 colorama
-google-search
+hashlib
+selenuim
+optparse
+mechanize
+smtplib
+pygoogling
+platform
