@@ -1156,6 +1156,9 @@ def PlatformCheck():
 		long()
 		agreement()
 try:
+
+	if arg1 != "":
+		mainmenu()
 	if sys.argv[1] == 'mainmenu':
 		mainmenu()
 	if sys.argv[1] == 'readme':
