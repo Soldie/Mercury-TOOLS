@@ -203,8 +203,8 @@ def sms():
 		mainmenu()
 def readme():
 	clear()
-	readme = open(x+'\README.md','r') #opens file
-	license = open(x+'\License', 'r') #opens file
+	readme = open(x+'/README.md','r') #opens file
+	license = open(x+'/License', 'r') #opens file
 	file_contents = readme.read() #reads file
 	file_contents2 = license.read() #reads file
 	print (file_contents) #prints ReadMe
