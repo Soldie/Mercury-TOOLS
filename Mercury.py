@@ -13,6 +13,23 @@ import os, sys,time
 import colorama
 from colorama import Fore, init
 import socket
+import re
+import json
+import wget
+import socket
+import urllib
+import smtplib
+import random
+import hashlib
+import requests
+import platform
+import argparse
+import mechanize
+import subprocess
+from six.moves import urllib
+from selenium import webdriver
+from colorama import init, Fore, Back, Style
+from pygoogling.googling import GoogleSearch
 init(convert=True)
 try:
 	import re
@@ -88,7 +105,6 @@ M = '\033[1;35;32m' # magenta
 x = os.path.dirname(os.path.abspath(__file__))
 init(convert=True)
 ip = socket.gethostbyname(socket.gethostname())
-results = subprocess.check_output(["netsh", "wlan", "show", "network"])
 
 termsAndConditions = Fore.RED + '''\033[4m Don`t Use Mercury To:
 create and share malicious viruses, illegally harm others computers,
