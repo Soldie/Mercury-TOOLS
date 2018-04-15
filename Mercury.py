@@ -838,9 +838,9 @@ def webbrowserfunc():
 	anonbrowser.get('http://www.ip-adress.eu/')
 
 def mac():
-	global macs
 	try:
-		os.system(macs + ' ') #For Linux Change to ifconfig -a
+		os.system('ifconfig - a') #For Linux Change to ifconfig -a
+		os.system('getmac')
 		long()
 		mainmenu()
 	except KeyboardInterrupt:
@@ -1142,16 +1142,19 @@ def PlatformCheck():
 	if sys.platform == 'win32':
 		print(Fore.CYAN + "Windows Detected")  ##Windows 32-bit Check
 		macs = 'getmac'
+		opt = 'win'
 		quick()
 		mainmenu()
 	if sys.platform == 'win64':
 		print(Fore.CYAN + "Windows Detected")  ##Windows 64-bit Check
 		macs = 'getmac'
+		opt = 'win'
 		quick()
 		mainmenu()
 	else:
 		print(Fore.RED + "Unix/Linux Kernel detected... mercury is built for windows\n")  #Linux
 		macs = 'ifconfig -a'
+		opt = 'linux'
 		long()
 		mainmenu()
 def main():
