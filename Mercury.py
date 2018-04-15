@@ -214,7 +214,7 @@ def readme():
 	print (file_contents2) #print License
 	extra_long()
 	readme.close()
-	license.cose()
+	license.close()
 	mainmenu()
 def sub_link():
 	url = raw_input(Fore.CYAN + 'Enter an url: ')
