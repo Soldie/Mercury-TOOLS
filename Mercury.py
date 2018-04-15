@@ -12,6 +12,7 @@ inspired by fsociety and Trity
 import os, sys,time
 import colorama
 from colorama import Fore, init
+import socket
 init(convert=True)
 try:
 	import re
