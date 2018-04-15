@@ -1157,7 +1157,7 @@ def PlatformCheck():
 		agreement()
 try:
 
-	if arg1 != "":
+	if arg[1] != "":
 		mainmenu()
 	if sys.argv[1] == 'mainmenu':
 		mainmenu()
