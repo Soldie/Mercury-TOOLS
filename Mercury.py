@@ -10,6 +10,9 @@ inspired by fsociety and Trity
 
 #Modules
 import os, sys,time
+import colorama
+from colorama import Fore, init
+init(convert=True)
 try:
 	import re
 	import json
