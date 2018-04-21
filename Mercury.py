@@ -326,7 +326,7 @@ def twitter():
 		mainmenu()
 	except:
 		mainmenu()
-
+attempt = 0
 def websitess():
 	global browser
 	global attempt
@@ -347,7 +347,7 @@ def websitess():
 | $$      |__/          | $$
 | $$       /$$ /$$$$$$$ | $$   /$$  /$$$$$$$
 | $$      | $$| $$__  $$| $$  /$$/ /$$_____/
-  \033[96m| $$      | $$| $$  \ $$| $$$$$$/ |  $$$$$$
+\033[96m| $$      | $$| $$  \ $$| $$$$$$/ |  $$$$$$
 | $$      | $$| $$  | $$| $$_  $$  \____  $$
 | $$$$$$$$| $$| $$  | $$| $$ \  $$ /$$$$$$$/
 |________/|__/|__/  |__/|__/  \__/|_______/
@@ -1230,7 +1230,7 @@ def mainmenu():
 	[7]\033[96m GitHub cloner \033[1;37;40m			[16]\033[96m Google Dorks\033[1;37;40m  	  	        [25]\033[96m Websites \033[1;37;40m
 	[8]\033[96m Pip installer \033[1;37;40m 			[17]\033[96m Proxy Browser\033[1;37;40m 	                [26]\033[96m Twitter Info Grabber \033[1;37;40m
 
-	[100]\033[96m Update\033[1;37;40m	[99]\033[96m Exit tool\033[1;37;40m	
+	[100]\033[96m Update\033[1;37;40m	[99]\033[96m Exit tool\033[1;37;40m
 	''')
 	ans = raw_input(Fore.WHITE + 'Enter a choice  ~# ')
 	if ans == '0':
