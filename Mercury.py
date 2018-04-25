@@ -16,7 +16,6 @@ from colorama import Fore, init
 import socket
 import re
 import json
-import wget
 import socket
 import urllib
 import urllib2
@@ -36,7 +35,6 @@ init(convert=True)
 try:
 	import re
 	import json
-	import wget
 	import socket
 	import urllib
 	import smtplib
@@ -55,7 +53,7 @@ try:
 except ImportError: #If you dont have the required modules this error will help install them for you
 	print ('\033[4m Do you have all of the needed Modules ?')
 	time.sleep(1)
-	yn = raw_input('Would You Like To Install Them Now? y/n: ')
+	yn = raw_input('Would You Like To Install Them Now? y/n (I highly recommend you manually install the modules!!!): ')
 	if yn == 'n':
 		pass
 	if yn == 'y':
