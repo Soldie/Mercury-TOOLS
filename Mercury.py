@@ -187,46 +187,6 @@ def dork1_t():
 			mainmenu()
 
 
-def sms():
-	try:
-		print Fore.CYAN + "Enter the provider ex: @vtext.com for Verizon" #@vtext.com #messaging.sprintpcs.com
-	        provider = raw_input(Fore.CYAN + 'Enter provider: ' )
-		phone_num = raw_input(Fore.CYAN + 'phone number to spam: ') + provider
-		gmail = raw_input(Fore.CYAN + 'Your email: ')
-		password = raw_input(Fore.CYAN + 'What is your email password? ' )
-	        server = smtplib.SMTP("smtp.gmail.com",587)
-	        server.starttls()
-	        server.login(gmail, password)
-		message = raw_input('Message: ')
-	        spam_msg = "From: {} \r\nTo: {} \r\n\r\n {}".format(gmail, phone_num, message) #Trity
-	        for i in range(times):
-	            server.sendmail(gmail, phone_num, spam_msg)
-	        time.sleep(0.1)
-		print ( Fore.GREEN + 'Successfully sent! ')
-		long()
-		mainmenu()
-	except KeyboardInterrupt:
-		mainmenu()
-def sms_t():
-	try:
-		print Fore.CYAN + "Enter the provider ex: @vtext.com for Verizon" #@vtext.com #messaging.sprintpcs.com
-	        provider = raw_input(Fore.CYAN + 'Enter provider: ' )
-		phone_num = raw_input(Fore.CYAN + 'phone number to spam: ') + provider
-		gmail = raw_input(Fore.CYAN + 'Your email: ')
-		password = raw_input(Fore.CYAN + 'What is your email password? ' )
-	        server = smtplib.SMTP("smtp.gmail.com",587)
-	        server.starttls()
-	        server.login(gmail, password)
-		message = raw_input('Message: ')
-	        spam_msg = "From: {} \r\nTo: {} \r\n\r\n {}".format(gmail, phone_num, message) #Trity
-	        for i in range(times):
-	            server.sendmail(gmail, phone_num, spam_msg)
-	        time.sleep(0.1)
-		print ( Fore.GREEN + 'Successfully sent! ')
-		long()
-		termux()
-	except KeyboardInterrupt:
-		termux()
 def readme():
 	clear()
 	license = open(x+'/License', 'r') #opens file
@@ -241,20 +201,6 @@ def readme():
 	readme.close()
 	license.close()
 	mainmenu()
-def readme_t():
-	clear()
-	license = open(x+'/License', 'r') #opens file
-	file_contents = readme.read() #reads file
-	file_contents2 = license.read() #reads file
-	print (file_contents) #prints ReadMe
-	space()
-	extra_long()
-	clear()
-	print (file_contents2) #print License
-	extra_long()
-	readme.close()
-	license.close()
-	termux()
 def sub_link():
 	url = raw_input(Fore.CYAN + 'Enter an url: ')
 	website = urllib2.urlopen(url)
@@ -272,23 +218,6 @@ def sub_link():
 
 	extra_long()
 	mainmenu()
-def sub_link_t():
-	url = raw_input(Fore.CYAN + 'Enter an url: ')
-	website = urllib2.urlopen(url)
-	html = website.read()
-	links = re.findall('"((http|ftp)s?://.*?)"', html)
-	space()
-	count = 0
-	try:
-		for x in links:
-			website_sub = x[0]
-			print (Fore.GREEN + website_sub)
-			website = urllib2.urlopen(x[count])
-	except urllib2.HTTPError:
-		pass
-
-	extra_long()
-	termux()
 def update():
 	clear()
 	quick()
@@ -676,33 +605,6 @@ def sourcecode():
 		html.close()
 		html1.close()
 		mainmenu()
-def sourcecode_t():
-	try:
-		name = raw_input(Fore.CYAN + 'Enter the file name: ') #Save File
-		file = name+'.html'
-		URL1=raw_input(Fore.CYAN + 'Enter An Url ') #Url
-		html1 = open(file, 'a+') #Writes The File
-		html = open(file, 'w')
-		response = urllib2.urlopen(URL1) #Opens Url
-		page_source = response.read() #Reads URL
-		space()
-		print >>html,  page_source #Change to python3 Syntax
-		print ('Done ! saved under "Users" ')
-		quick()
-		clear()
-		html.close()
-		html1.close()
-		termux()
-	except KeyboardInterrupt:
-		print ('Stopped! ')
-		html.close()
-		html1.close()
-		termux()
-	except IOError:
-		print ('File was not found \: ')
-		html.close()
-		html1.close()
-		termux()
 def siteexists():
     try:
         site = raw_input(Fore.CYAN + 'Enter a website: ')
@@ -726,29 +628,6 @@ def siteexists():
         	print ('%s Exists ') % site
         	long()
         	mainmenu()
-def siteexists_t():
-    try:
-        site = raw_input(Fore.CYAN + 'Enter a website: ')
-        urllib2.urlopen(site)
-    except urllib2.HTTPError, e:
-        print (Fore.RED + site  + ' Does not exist')
-        print(e.code)
-        quick()
-        termux()
-    except urllib2.URLError, e:
-        print (Fore.RED + site + ' Does not exist')
-        quick()
-        termux()
-    except KeyboardInterrupt:
-      termux()
-    except ValueError:
-    	print (Fore.RED + 'Unknown url type / invalid url')
-    	quick()
-    	termux()
-    else:
-        	print ('%s Exists ') % site
-        	long()
-        	termux()
 def brute_force(): #Declares Function
 	f = open(x+'/Resources/passwords.txt', 'r')
 	options = webdriver.ChromeOptions()
@@ -831,29 +710,6 @@ def admin():
 		else:
    			print(Fore.GREEN + website2)
    			count4 += 1
-def admin_t():
-	links = open(x+'\Resources\links.txt')
-	website = raw_input(Fore.CYAN + 'Enter a site to scan just www: ')
-	type_link = raw_input('Is the link https or http: ')
-	count4 = 1
-	while True:
-		try:
-			sub_link = links.readline(count4)
-			website2 = type_link+'://'+website+'/'+ sub_link
-			req = Request(website2)
-	    		response = urlopen(req)
-		except HTTPError as e:
-			print(Fore.RED  + website2)
-			count4 += 1
-		except URLError as e:
-    			print(Fore.RED + website2)
-    			count4 += 1
-    		except  KeyboardInterrupt:
-    			termux()
-    			links.close()
-		else:
-   			print(Fore.GREEN + website2)
-   			count4 += 1
 def hash():
 
 	try:
@@ -922,24 +778,6 @@ def ipaddress():
 		print ('Dont include https or http in the site link !')
 		quick()
 		mainmenu()
-def ipaddress_t():
-	try:
-		url2 = raw_input(Fore.CYAN +"Enter a website url ") #User Input
-		ip = socket.gethostbyname(url2) #Gets Ip Address
-		print (Fore.CYAN + (ip)) #Prints Ip Address
-		long()
-		clear()
-		termux()
-	except socket.gaierror:
-		print (Fore.RED + 'Couldnt retrieve the ipaddress')
-		quick()
-		termux()
-	except KeyboardInterrupt:
-		termux()
-	except AttributeError: #enter link like www.google.com rather than https://www.google.com
-		print ('Dont include https or http in the site link !')
-		quick()
-		termux()
 
 def networksweb():
 	url3 = raw_input(Fore.CYAN + 'Enter a host name include https: ')
@@ -979,7 +817,6 @@ def webbrowserfunc():
 	options = webdriver.ChromeOptions()
 	options.add_argument("--disable-popup-blocking")
 	options.add_argument("--ignore-certificate-errors")
-	options.add_argument("--disable-extensions")
 	options.add_argument("disable-infobars")
 	options.add_argument("test-type")
 	options.add_argument('--hide-scrollbars')
@@ -1026,26 +863,6 @@ def github():
 		mainmenu()
 def exit():
 	sys.exit()
-def geoLocation_t():
-	try:
-		target = raw_input(Fore.CYAN + '	Enter an ip address: ') #User Input
-		send_url = 'http://freegeoip.net/json/'+target #Finds Targets
-		r = requests.get(send_url) #Sends Url
-		j = json.loads(r.text) #Reads All Text
-		cn = j['country_name'] #Reads Country
-		rc = j['region_code'] #Reads Region Code
-		city = j['city'] #Reads City
-		lat = j['latitude'] #Read Latitiude
-		lon = j['longitude'] #Read Longitude
-		print (lat)
-		print  (lon)
-		print (city)
-		print (rc)
-		print (cn)
-		long() #Pause
-		termux()
-	except KeyboardInterrupt:
-		termux()
 def emailspoofsetup():
 	br = mechanize.Browser()
 
@@ -1174,16 +991,6 @@ def nmap():
 		ip = raw_input(Fore.CYAN + 'Enter an ip: ')
 		os.system('nmap -T4 -A -v '+ip)
 		mainmenu()
-def nmap_t():
-	nmap_ins = raw_input(Fore.CYAN + 'Have you already installed nmap? y/n ')
-	if nmap_ins == 'n':
-		print (Fore.RED + 'Install in then use this tool')
-		long()
-		termux()
-	if nmap_ins == 'y':
-		ip = raw_input(Fore.CYAN + 'Enter an ip: ')
-		os.system('nmap -T4 -A -v '+ip)
-		termux()
 def listen():
 	global ip
 	print (Fore.RED + 'Once started it cant be stoped without fully closing the program! ')
@@ -1290,8 +1097,6 @@ def mainmenu():
 		exit()
 	if ans == '100':
 		update()
-	if ans == 't':
-		termux()
 	else:
 		mainmenu()
 def InternetCheck():
@@ -1302,21 +1107,13 @@ def InternetCheck():
 		long()
 def PlatformCheck():
 	if sys.platform == 'win32':
-		print(Fore.CYAN + "Windows Detected")  ##Windows 32-bit Check
-		macs = 'getmac'
-		opt = 'win'
-		quick()
+		init(convert=True)
 		mainmenu()
 	if sys.platform == 'win64':
-		print(Fore.CYAN + "Windows Detected")  ##Windows 64-bit Check
-		macs = 'getmac'
-		opt = 'win'
-		quick()
+		init(convert=True)
 		mainmenu()
 	else:
-		print(Fore.RED + "Unix/Linux Kernel detected... mercury is built for windows\n")  #Linux
-		macs = 'ifconfig -a'
-		opt = 'linux'
+		init(convert=True)
 		long()
 		mainmenu()
 def main():
