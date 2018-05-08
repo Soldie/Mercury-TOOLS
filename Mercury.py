@@ -98,7 +98,6 @@ GR = '\033[37m' # gray
 T  = '\033[93m' # tan
 M = '\033[1;35;32m' # magenta
 x = os.path.dirname(os.path.abspath(__file__))
-init(convert=True)
 ip = socket.gethostbyname(socket.gethostname())
 
 termsAndConditions = Fore.RED + '''\033[4m Don`t Use Mercury To:
