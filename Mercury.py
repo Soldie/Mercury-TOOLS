@@ -31,7 +31,6 @@ from six.moves import urllib
 from selenium import webdriver
 from colorama import init, Fore, Back, Style
 from pygoogling.googling import GoogleSearch
-init(convert=True)
 try:
 	import re
 	import json
