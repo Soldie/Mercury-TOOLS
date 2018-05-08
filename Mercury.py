@@ -50,7 +50,7 @@ try:
 	from pygoogling.googling import GoogleSearch
 	from urllib2 import Request, urlopen, URLError, HTTPError
 except ImportError: #If you dont have the required modules this error will help install them for you
-	print ('\033[4m Do you have all of the needed Modules ?')
+	print ('Do you have all of the needed Modules ?')
 	time.sleep(1)
 	yn = raw_input('Would You Like To Install Them Now? y/n (I highly recommend you manually install the modules!!!): ')
 	if yn == 'n':
@@ -100,7 +100,7 @@ M = '\033[1;35;32m' # magenta
 x = os.path.dirname(os.path.abspath(__file__))
 ip = socket.gethostbyname(socket.gethostname())
 
-termsAndConditions = Fore.RED + '''\033[4m Don`t Use Mercury To:
+termsAndConditions = Fore.RED + ''' Don`t Use Mercury To:
 create and share malicious viruses, illegally harm others computers,
 interrupt wifi / bluetooth signals without permission, violate security,
 and violate privacy
@@ -1111,7 +1111,6 @@ def PlatformCheck():
 		init(convert=True)
 		mainmenu()
 	else:
-		init(convert=True)
 		long()
 		mainmenu()
 def main():
