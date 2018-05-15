@@ -686,7 +686,7 @@ def brute_force(): #Declares Function
 			long()
 			mainmenu()
 def admin():
-	links = open(x+'\Resources\links.txt')
+	links = open(x+'//Resources//links.txt')
 	website = raw_input(Fore.CYAN + 'Enter a site to scan just www: ')
 	type_link = raw_input('Is the link https or http: ')
 	count4 = 1
@@ -1017,23 +1017,23 @@ def mainmenu():
 \033[96m | $$\  $ | $$| $$_____/| $$      | $$      | $$  | $$| $$      | $$  | $$
  | $$ \/  | $$|  $$$$$$$| $$      |  $$$$$$$|  $$$$$$/| $$      |  $$$$$$$
  |__/     |__/ \_______/|__/       \_______/ \______/ |__/       \____  $$
-                    \033[91m[Coded By MetaChar] \033[1;37;40m                         /$$  | $$
-                  \033[91m[Instagram: @Metachar_]\033[1;37;40m                        | $$$$$$/
-                     [%s]\033[1;37;40m                            \______/
+                    \033[91m[Coded By MetaChar] \033[0m                         /$$  | $$
+                  \033[91m[Instagram: @Metachar_]\033[0m                       | $$$$$$/
+                     [%s]\033[0m                                 \______/
  ''') % ip
 	space()
 	print (Fore.WHITE + '''
-	[0]\033[96m ReadMe and license \033[1;37;40m 		[9]\033[96m SourceCode from website \033[1;37;40m		[18]\033[96m Gmail Spam\033[1;37;40m
-	[1]\033[96m Brute force \033[1;37;40m 			[10]\033[96m Ip address from website\033[1;37;40m		[19]\033[96m Gmail Spoof\033[1;37;40m
-	[2]\033[96m Port Listen \033[1;37;40m             		[11]\033[96m Find sublinks\033[1;37;40m                      [20]\033[96m Does Site Exist \033[1;37;40m
-	[3]\033[96m GeoLocation \033[1;37;40m            	        [12]\033[96m Hash encode\033[1;37;40m                        [21]\033[96m Hex decode /encode \033[1;37;40m
-	[4]\033[96m Show mac address \033[1;37;40m			[13]\033[96m Download tools\033[1;37;40m                     [22]\033[96m Find Admin Panel \033[1;37;40m
-	[5]\033[96m Website online/offline \033[1;37;40m		[14]\033[96m Nmap\033[1;37;40m                               [23]\033[96m DOS \033[1;37;40m
-	[6]\033[96m File explorer \033[1;37;40m			[15]\033[96m Proxy Scraper \033[1;37;40m                     [24]\033[96m SMS Spam\033[1;37;40m
-	[7]\033[96m GitHub cloner \033[1;37;40m			[16]\033[96m Google Dorks\033[1;37;40m  	  	        [25]\033[96m Websites \033[1;37;40m
-	[8]\033[96m Pip installer \033[1;37;40m 			[17]\033[96m Proxy Browser\033[1;37;40m 	                [26]\033[96m Twitter Info Grabber \033[1;37;40m
+	[0]\033[96m ReadMe and license \033[0m 		[9]\033[96m SourceCode from website \033[0m		[18]\033[96m Gmail Spam\033[0m
+	[1]\033[96m Brute force \033[0m 			[10]\033[96m Ip address from website\033[0m		[19]\033[96m Gmail Spoof\033[0m
+	[2]\033[96m Port Listen \033[0m             		[11]\033[96m Find sublinks\033[0m                      [20]\033[96m Does Site Exist \033[0m
+	[3]\033[96m GeoLocation \033[0m            	        [12]\033[96m Hash encode\033[0m                        [21]\033[96m Hex decode /encode \033[0m
+	[4]\033[96m Show mac address \033[0m			[13]\033[96m Download tools\033[0m                     [22]\033[96m Find Admin Panel \033[0m
+	[5]\033[96m Website online/offline \033[0m		[14]\033[96m Nmap\033[0m                               [23]\033[96m DOS \033[0m
+	[6]\033[96m File explorer \033[0m			[15]\033[96m Proxy Scraper \033[0m                     [24]\033[96m SMS Spam\033[0m
+	[7]\033[96m GitHub cloner \033[0m			[16]\033[96m Google Dorks\033[0m  	  	        [25]\033[96m Websites \033[0m
+	[8]\033[96m Pip installer \033[0m 			[17]\033[96m Proxy Browser\033[0m 	                [26]\033[96m Twitter Info Grabber \033[0m
 
-	[100]\033[96m Update\033[1;37;40m	[99]\033[96m Exit tool\033[1;37;40m
+	[100]\033[96m Update\033[0m	[99]\033[96m Exit tool\033[0m
 	''')
 	ans = raw_input(Fore.WHITE + 'Enter a choice  ~# ')
 	if ans == '0':
